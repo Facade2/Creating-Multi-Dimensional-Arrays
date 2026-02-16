@@ -37,10 +37,16 @@ print "<p>The first chapter of my second book is <i>{$books['PHP Advanced VQP'][
 print "<p>The fourth chapter of my fourth book is <i>{$books['PHP and MySQL VQP'][4]}</i>.</p>";
 
 //see what happens with foreach:
-foreach ($books as $key => $value) {
-	print "<p>$key: $value</p>\n";
+foreach ($books as $title => $chapters) {
+	print "<p>$title";
+	foreach ($chapters as $number => $chapter) {
+		print "<br/>Chapter $number is $chapter";
+	}
+	print '</p>';
+
 }
 
 ?>	
 </body>
+
 </html>
